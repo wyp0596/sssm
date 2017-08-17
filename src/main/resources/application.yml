@@ -1,0 +1,21 @@
+# 开发环境配置
+server:
+  # 监听端口配置
+  port: 8080
+spring:
+  # 数据源配置
+  datasource:
+    # mysql地址
+    url: jdbc:mysql://127.0.0.1:3306/sssm?useAffectedRows=true&useSSL=false&characterEncoding=UTF-8
+    # mysql用户名
+    username: root
+    # mysql密码
+    password: admin
+    # 驱动类名
+    driver-class-name: com.mysql.jdbc.Driver
+# mybatis配置
+mybatis:
+  # 实体类目录
+  type-aliases-package: com.ajavac.domain
+  # mapper目录
+  mapper-locations: mapper/**/*.xml
