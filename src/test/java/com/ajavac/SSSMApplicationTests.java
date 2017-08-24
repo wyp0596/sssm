@@ -1,7 +1,5 @@
 package com.ajavac;
 
-import com.ajavac.res.TestRes;
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +10,7 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 
 /**
- * 测试类
+ * 基础测试类
  * Created by wyp0596 on 17/08/2017.
  */
 @RunWith(SpringRunner.class)
@@ -21,14 +19,14 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class SSSMApplicationTests {
 
     @LocalServerPort
-    private int port;
+    protected int port;
 
     @Autowired
-    private TestRestTemplate restTemplate;
+    protected TestRestTemplate restTemplate;
+
 
     @Test
-    public void testAPI() {
-        TestRes testRes = restTemplate.getForObject("http://localhost:" + port + "/test", TestRes.class);
-        Assert.assertEquals(testRes.getNumber(), new Integer(1));
+    public void contextLoads() {
     }
+
 }

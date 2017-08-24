@@ -12,8 +12,14 @@ public class TestRes {
 
     private String dateTime;
 
+
     public TestRes() {
         number = 1;
+        dateTime = LocalDateTime.now().toString();
+    }
+
+    public TestRes(Integer number) {
+        this.number = number;
         dateTime = LocalDateTime.now().toString();
     }
 
